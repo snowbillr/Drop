@@ -1,4 +1,4 @@
-define(["crafty", "components/Player"], function(Crafty) {
+define(["crafty", "components/Player", "components/Platform"], function(Crafty) {
     Crafty.scene("Game", function() {
         Crafty.e("2D, Canvas, Color")
             .attr({x: STAGE_BOUNDS.x, y: STAGE_BOUNDS.y, w: STAGE_BOUNDS.w, h: STAGE_BOUNDS.h})
@@ -10,5 +10,7 @@ define(["crafty", "components/Player"], function(Crafty) {
             .color("rgb(255, 253, 208)");
 
         Crafty.e("Player");
+
+        Crafty.e("Platform").platform(10, 400, 200, 10, 1);
     });
 });
